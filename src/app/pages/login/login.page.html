@@ -1,0 +1,28 @@
+<ion-content class="ion-padding ion-text-center bg-image no-scroll center">
+  <div class="Container">
+      <div class="SubContainer">
+          <img class="logo" src="../../../../assets/img/Logo1.png">
+          <h2 class="ion-text-center"  style="color: green;">Inicia Sesión</h2>
+          <form [formGroup]="loginForm">
+              <ion-item class="input">
+                  <ion-label position="floating" style="color: black;" >Usuario / Correo</ion-label>
+                  <ion-input style="color: black;" type="text" formControlName="user_email"></ion-input>
+              </ion-item>
+              <ion-item class="input">
+                  <ion-label position="floating" style="color: black;">Contraseña</ion-label>
+                  <ion-input style="color: black;" type="password" formControlName="user_password" class="form-controll" required>
+                  </ion-input>
+              </ion-item>
+              <!-- <div class="ion-float-left">  
+                <ion-checkbox color="success" formControlName="isadmin"  checked="false" style="align-content: center;"></ion-checkbox> &nbsp;<ion-label class="coloradmin">Admin Access</ion-label>
+              </div> -->
+              <br>
+              <p class= "ion-text-center"  style="color: black;"><b>¡Olvide la contraseña!</b></p>
+              <h2 class="ion-text-center"> </h2>
+          </form>
+          <ion-button color="medium" style="color: green;" expand="block" (click)="login()" [disabled]="loginForm.invalid">Inicia Sesión</ion-button>
+          <p class="ion-text-center"  style="color: black;">¿No te has registrado? <b (click)="goRegister()"> Regístrate</b></p>
+          <p class="ion-text-center" style="color: black;">¿Quieres ser socio? <b (click)="goAsociar()"> Enviar solicitud</b></p>
+      </div>
+  </div>
+</ion-content>
